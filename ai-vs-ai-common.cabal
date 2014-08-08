@@ -25,7 +25,7 @@ library
                    containers,
                    fgl,
                    mtl
-  extensions:     -Wall -XDeriveDataTypeable
+  extensions:     DeriveDataTypeable
   exposed-modules:   AiVsAi.GameData,
                      AiVsAi.AIUtil,
                      AiVsAi.Util,
