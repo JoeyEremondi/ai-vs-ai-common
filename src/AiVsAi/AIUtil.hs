@@ -1,15 +1,15 @@
 module AiVsAi.AIUtil where
 
 import Prelude
-import GameLib.GameData
+import AiVsAi.GameData
 
 import Control.Applicative
-import GameLib.Util
+import AiVsAi.Util
 
 --import Data.Graph.AStar
 
 --import Game.GameState
-import GameLib.UnitProperties
+import AiVsAi.UnitProperties
 
 import Data.Map ((!), elems, keys, fromList, toList)
 import Debug.Trace (trace)

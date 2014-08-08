@@ -1,7 +1,7 @@
 module AiVsAi.UnitProperties where
 
 import Prelude
-import GameLib.GameData
+import AiVsAi.GameData
 
 --TODO implement this as json?
 
