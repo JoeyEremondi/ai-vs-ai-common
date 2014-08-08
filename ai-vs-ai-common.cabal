@@ -1,0 +1,18 @@
+name:           ai-vs-ai-lib
+version:        0.1
+cabal-version:  >=1.2
+build-type:     Simple
+author:         joey
+
+library
+  hs-source-dirs:  src
+  build-depends:   base >= 4,
+                   containers,
+                   fgl,
+                   mtl
+  ghc-options:     -Wall -XDeriveDataTypeable
+  exposed-modules:   AiVsAi.GameData,
+                     AiVsAi.AIUtil,
+                     AiVsAi.Util,
+                     AiVsAi.UnitProperties
+
