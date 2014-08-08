@@ -1,1 +1,7 @@
-
+deploy:
+  provider: hackage
+  username: jeremondi
+  password:
+    secure: i3evRHtbs3oS4xFUgASPMCVEXILi4tyySFLFGbrUyuWGz+Es8sGiOqsoZi7kCIniqUL+DswJPoTZA0zo7nTW+vEZfRHYef22579brfl/pBRFne1Ry+7jg2YemKYnoNLSgzInGP2AUmmQlOoj0kjVQXuRIL04mg6cXI+qyEpMo9o=
+  on:
+    repo: JoeyEremondi/ai-vs-ai-common
