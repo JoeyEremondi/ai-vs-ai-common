@@ -4,7 +4,7 @@ Synopsis:            Common libs for an upcoming AI based game
 Description:         Common libs for an upcoming AI based game
 Homepage:            http://github.com/JoeyEremondi/ai-vs-ai-common
 
-License: GPL2
+License: GPL-2
 License-file: LICENSE
 
 build-type:     Simple
@@ -25,7 +25,7 @@ library
                    containers,
                    fgl,
                    mtl
-  ghc-options:     -Wall -XDeriveDataTypeable
+  extensions:     -Wall -XDeriveDataTypeable
   exposed-modules:   AiVsAi.GameData,
                      AiVsAi.AIUtil,
                      AiVsAi.Util,
