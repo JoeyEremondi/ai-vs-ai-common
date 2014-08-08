@@ -1,0 +1,1 @@
+module AiVsAi.GameData where
