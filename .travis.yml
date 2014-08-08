@@ -2,6 +2,8 @@ language:
   haskell
 install:
   cabal install ./ai-vs-ai-common.cabal
+test:
+  cabal check
 deploy:
   provider: hackage
   username: jeremondi
