@@ -1,12 +1,27 @@
-name:           ai-vs-ai-lib
-version:        0.0.1
-cabal-version:  >=1.2
+Name:                ai-vs-ai-common
+Version:             0.0.2
+Synopsis:            Common libs for an upcoming AI based game
+Description:         Common libs for an upcoming AI based game
+Homepage:            http://github.com/JoeyEremondi/ai-vs-ai-common
+
+License: GPL2
+License-file: LICENSE
+
 build-type:     Simple
-author:         joey
+author:         Joey Eremondi
+Maintainer:     joey@eremondi.com
+Copyright:      Copyright: (c) 2014 Joey Eremondi
+
+Category: Compiler, Language
+Cabal-version:       >=1.9
+
+source-repository head
+  type: git
+  location: git://github.com/JoeyEremondi/ai-vs-ai-common
 
 library
   hs-source-dirs:  src
-  build-depends:   base >= 4,
+  build-depends:   base >=4.2 && <5,
                    containers,
                    fgl,
                    mtl
