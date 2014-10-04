@@ -39,10 +39,10 @@ data InfInt = Infinity | Finite Int
     deriving (Eq, Show)
     
 instance Ord InfInt where
-    Infinity < Infinity = False
-    Finite _ < Infinity = True
-    Infinity < Finite _  = False
-    Finite a < Finite b = a < b
+    Infinity <= Infinity = True
+    Finite _ <= Infinity = True
+    Infinity <= Finite _  = False
+    Finite a <= Finite b = a <= b
 
 maybeEmpty :: [a] -> Maybe [a]    
 maybeEmpty [] = Nothing

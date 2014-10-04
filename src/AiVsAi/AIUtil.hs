@@ -5,6 +5,7 @@ import AiVsAi.GameData
 
 import Control.Applicative
 import AiVsAi.Util
+import AiVsAi.Graph
 
 --import Data.Graph.AStar
 
@@ -14,13 +15,13 @@ import AiVsAi.UnitProperties
 import Data.Map ((!), elems, keys, fromList, toList)
 import Debug.Trace (trace)
 
-import Data.Graph.Inductive.Query.BFS
-import Data.Graph.Inductive.Graph
+--import Data.Graph.Inductive.Query.BFS
+--import Data.Graph.Inductive.Graph
 
 import Control.Applicative
 
 import Data.Maybe (fromJust, mapMaybe )
-import Data.Graph.Inductive.PatriciaTree
+--import Data.Graph.Inductive.PatriciaTree
 import Data.List (minimumBy)
 
 
@@ -35,12 +36,12 @@ aStarWithGoal :: TileID -> a -> GameState -> TileID -> Maybe [TileID]
 aStarWithGoal goal _heuristic gs start = assert (endsWithGoal goal ret) $
     ret
     where 
-        ret = maybeEmpty $ map (fromJust . lab graph)   path
-        graph :: Gr TileID (TileID, TileID)
+        ret = maybeEmpty   path
+        --graph :: Gr TileID (TileID, TileID)
         (graph, nodeNum) = mapGraph start  gs
-        path :: [Node]
+        path :: [TileID]
         path = --trace ("Seaching with graph " ++ (show $ map (\(_,_,a)->a) $ labEdges graph) ) $
-          esp (nodeNum start) (nodeNum goal) graph
+          esp start goal graph
 
 
 validPath gs (Just (h:t)) = stepsNotEmpty t
@@ -133,7 +134,8 @@ enemyInRange gs uid target =  (euclidDist upos tpos) <= movementRange utype
 tileIsEmpty gs  tile = case occupantAt tile gs of
   Empty -> True
   _ -> False 
-
+  
+{-
 mapGraph :: TileID -> GameState -> (Gr TileID (TileID, TileID), TileID -> Node)
 mapGraph start gs = (graph, nodeNum)
     where
@@ -162,3 +164,4 @@ mapGraph start gs = (graph, nodeNum)
         toNode v = (nodeNum v, v)
         edges :: [LEdge (TileID, TileID)]
         edges = concat [edgesLeaving v | v <- keys edgeDict]
+-}
